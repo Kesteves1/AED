@@ -1,0 +1,19 @@
+1- Processador: Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz   3.00 GHz
+Memória Principal (RAM):  16,0 GB (utilizável: 15,8 GB)
+Sistema Operacional: Windows 11 Pro
+
+2- A) Tamanho 62500:
+Média Bubble sort = 735.86 milissegundos 
+Média Quicksort = 9,88 milissegundos
+
+B) Tamanho: 125000
+Média Bubble Sort = 2578.76 milissegundos
+Média Quicksort =
+
+C) Tamanho 250000
+Média Bubble Sort = 11085.82 milissegundos
+Média Quicksort =
+
+D)Tamanho: 350000
+Média Bubble Sort = 27123.42 milissegundos
+Média Quicksort =
