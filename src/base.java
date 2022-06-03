@@ -55,15 +55,16 @@ public class base {
            }
          }
          return v;
-       }
-
-       private static void quickSort(int[] vetor, int inicio, int fim) {
+        }
+          
+       
+       private static int[] quickSort(int[] vetor, int inicio, int fim) {
         if (inicio < fim) {
           int posicaoPivo = separar(vetor, inicio, fim);
           quickSort(vetor, inicio, posicaoPivo - 1);
           quickSort(vetor, posicaoPivo + 1, fim);
-    
         }
+        return vetor;
       }
     
       private static int separar(int[] vetor, int inicio, int fim) {
@@ -95,6 +96,7 @@ public class base {
      */
     public static int[] gerarVetor(int tam, double bagunca) {
         int[] vet = new int[tam];
+        
 
         for (int i = 0; i < tam; i++)
             vet[i] = i + 1;
@@ -112,27 +114,29 @@ public class base {
     public static void main(String[] args) {
         clear();
         double soma = 0;
-        
+        long[] armazenaTempo = new long [50];
         //62.500 125.000, 250.000, 375.000
         int tam = 375000;
         double bagunca = 5.15 ;
-        int[] V = gerarVetor(tam, bagunca);
+        int[] V = gerarVetor(tam, bagunca), ordenado = quickSort(V , 0, V.length - 1);
 
-          for(int i = 0; i<50; i++){
+       try{
+         
+            
             long start = System.currentTimeMillis();
-            bubbleSort(V);
-            //quickSort(V , 0, V.length - 1);
-            long elapsed = (System.currentTimeMillis() - start);  
-            soma += elapsed;
-          }
- 
+          //bubbleSort(V);
+           quickSort(ordenado, 0, V.length - 1);
           
+          long elapsed = (System.currentTimeMillis() - start);  
+             soma += elapsed;
+             //setInterval(armazenaTempo[i],1000);
+          System.out.println(soma);
+         //System.out.println(media);
+       } catch(Exception e){
+          System.out.println(e);
+       }
+       
         
-        
-
-        System.out.println((double)soma/50);
-      
-
-    }
-
-}
+      }
+   }
+  

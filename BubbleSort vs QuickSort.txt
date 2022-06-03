@@ -8,12 +8,17 @@ Média Quicksort = 9,88 milissegundos
 
 B) Tamanho: 125000
 Média Bubble Sort = 2578.76 milissegundos
-Média Quicksort =
+Média Quicksort = 13.44 milissegundos
 
 C) Tamanho 250000
 Média Bubble Sort = 11085.82 milissegundos
-Média Quicksort =
+Média Quicksort = 25.82 milissegundos
 
 D)Tamanho: 350000
 Média Bubble Sort = 27123.42 milissegundos
-Média Quicksort =
+Média Quicksort = 35.62 milissegundos
+
+2-
+
+Vetor desordenado:36 milissegundos
+Vetor ordenado: erro
